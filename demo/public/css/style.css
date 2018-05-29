@@ -1,0 +1,31 @@
+/**
+ * @name VueJS Cookie Component
+ * @description main stylesheet
+ * @author Steven Morrison <https://github.com/Zaffri/>
+ */
+
+html {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+    -moz-box-sizing: inherit;
+	-webkit-box-sizing: inherit;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+#app {
+
+}
+
+.clear {
+    clear: both;
+}
