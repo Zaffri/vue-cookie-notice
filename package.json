@@ -1,0 +1,16 @@
+{
+  "name": "zaffri-cookie",
+  "version": "0.0.1",
+  "author": "Steven Morrison",
+  "dependencies": {
+    "vue": "^2.2.5"
+  },
+  "devDependencies": {
+    "css-loader": "^0.23.1",
+    "file-loader": "^1.1.11",
+    "style-loader": "^0.13.2",
+    "vue-loader": "^7.5.3",
+    "webpack": "^2.3.2",
+    "webpack-loader": "0.0.1"
+  }
+}
