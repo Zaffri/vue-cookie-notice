@@ -6,7 +6,7 @@ node_modules
 npm-debug.log*
 
 # Webpack
-/js/bundle.js
+/public/js/bundle.js
 /webpack/images/*
 
 # DB and Logging

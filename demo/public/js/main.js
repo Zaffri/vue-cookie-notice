@@ -6,6 +6,7 @@
 
 // Vue and Main components
 import Vue from 'vue';
+import Demo from './components/Demo.vue'
 
 // Main app instance
 new Vue({
@@ -21,6 +22,6 @@ new Vue({
 
     },
     components: { 
-        
+        'Demo': Demo
     }
 });
