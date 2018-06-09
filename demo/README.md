@@ -1,7 +1,7 @@
-## VueJS Cookie Component
+## VueJS Cookie Notice Component
 Version 0.0.1
 
-Cookie component that is useful for GDPR compliant websites.
+Customizable cookie notice component (VueJS).
 
 ## Running Demo
 
@@ -15,14 +15,13 @@ $ npm install
 * Bundle app JS using Webpack.
 
 ```
-$ cd webpack
-$ webpack
+$ npm run build
 ```
 
 * Run app using node.
 
 ```
-$ node app.js
+$ npm run dev
 ```
 
 * Visit http://localhost/ to see working demo.

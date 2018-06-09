@@ -13,9 +13,10 @@ export default {
     data () {
         return {
             cookieData: {
-                message: 'Welcome to our website',
+                message: 'This site uses cookies to deliver our services and to show you relevant content. By using our site, you acknowledge that you have read and understand our Cookie Policy, Privacy Policy, and our Terms of Service.',
                 style: {
-                    background: '#1a75ff'
+                    background: '#1a75ff',
+                    text: '#e0f5ff'
                 }
             }
         }

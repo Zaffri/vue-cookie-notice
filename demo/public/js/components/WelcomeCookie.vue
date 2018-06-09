@@ -15,8 +15,9 @@
 export default {
     data () {
         return {
-            dataProp: 'style',
-            dataText: 'text'
+            dataStyle: 'style',
+            dataText: 'text',
+            dataBg: 'background'
         }
     },
     props: ['data'],
@@ -25,15 +26,23 @@ export default {
     },
     created: function() {
         // If style is NOT set then set default background
-        if(this.data.hasOwnProperty(this.dataProp) == false) {
-
+        if(this.data.hasOwnProperty(this.dataStyle) == false) {
+        
             this.data.style.background = '#ccc';
-            this.data.style.text = '#ccc';
+            this.data.style.text = '#fff';
 
         }   else {
 
-            if(this.data.hasOwnProperty(this.dataText) == false) {
-                this.data.style.text = '#fff';
+            let style = this.data.style;
+
+            // Set default background
+            if(style.hasOwnProperty(this.dataBg) == false) {
+                this.data.style.background = '#ccc';
+            }
+
+            // Set default text color
+            if(style.hasOwnProperty(this.dataText) == false) {
+                this.data.style.text = '#ddd';
             }
         }
     }

@@ -1,5 +1,5 @@
 /**
- * @name VueJS Cookie Component
+ * @name VueJS Cookie Notice Component
  * @description entry script for app
  * @author Steven Morrison <https://github.com/Zaffri/>
  */

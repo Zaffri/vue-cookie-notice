@@ -1,3 +1,9 @@
+/**
+ * @name VueJS Cookie Notice Component
+ * @description cookie stylesheet
+ * @author Steven Morrison <https://github.com/Zaffri/>
+ */
+
 .welcome-cookie-wrapper {
     position: relative;
 }
@@ -7,5 +13,6 @@
     top: 0;
     left: 0;
     width: 100%;
-    padding: 10px;
+    padding: 10px 30px;
+    font-size: 0.90em;
 }

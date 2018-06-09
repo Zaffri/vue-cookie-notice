@@ -1,5 +1,5 @@
 /**
- * @name VueJS Cookie Component
+ * @name VueJS Cookie Notice Component
  * @description store.js - vuex main store
  * @author Steven Morrison <https://github.com/Zaffri/>
  */
