@@ -13,6 +13,7 @@ export default {
     data () {
         return {
             cookieData: {
+                cookieName: 'cookie-notice-zaffri',
                 message: 'This site uses cookies to deliver our services and to show you relevant content. By using our site, you acknowledge that you have read and understand our Cookie Policy, Privacy Policy, and our Terms of Service.',
                 style: {
                     background: '#1a75ff',
