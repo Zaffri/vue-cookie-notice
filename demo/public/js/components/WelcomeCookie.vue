@@ -31,10 +31,14 @@ export default {
         // Set default styles if none supplied
         this.setDefaultStyle();
 
-        // Get cookie identifier and pass to ecist check
+        // Get cookie identifier
         let cookieName = this.defaultCookieName;
         if(this.data.hasOwnProperty(this.dataCookieName)) cookieName = this.data.cookieName;
-        this.checkCookieExists();
+        
+        // If cookie doesnt exist then show
+        if(this.checkCookieExists(cookieName) == false) {
+            this.visible = true;
+        }
 
     },
     methods: {
@@ -71,7 +75,6 @@ export default {
             let cookieIndex = -1;
 
             for(let x=0; x<cookies.length; x++) {
-                //console.log(x+': '+cookies[x]);
                 if(cookies[x].includes(cookieName)) {
                     cookieIndex = x;
                     break;
@@ -79,11 +82,12 @@ export default {
             }
 
             if(cookieIndex == -1) {
-                // Cookie doesnt exist, show notice
-                this.visible = true;
+                // Cookie doesnt exist
+                return false;
             }   else {
                 // Cookie exists
             }
+            return true;
         }
     },
     props: ['data']
