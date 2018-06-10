@@ -5,7 +5,10 @@
                 background: data.style.background, 
                 color: data.style.text
             }">
-            {{ data.message }}
+            <p>{{ data.message }}</p>
+
+            <span id="close-button">Accept & Close [x]</span>
+            <div class="clear"></div>
         </div>
 
     </div>
