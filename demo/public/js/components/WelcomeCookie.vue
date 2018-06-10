@@ -31,13 +31,10 @@ export default {
         // Set default styles if none supplied
         this.setDefaultStyle();
 
-        // Check for cookie
-        let cookie = this.defaultCookieName;
-        if(this.data.hasOwnProperty(this.dataCookieName)) cookie = this.defaultCookieName;
-
-        if(true) {
-            this.visible = true;
-        }
+        // Get cookie identifier and pass to ecist check
+        let cookieName = this.defaultCookieName;
+        if(this.data.hasOwnProperty(this.dataCookieName)) cookieName = this.data.cookieName;
+        this.checkCookieExists();
 
     },
     methods: {
@@ -62,6 +59,30 @@ export default {
                 if(style.hasOwnProperty(this.dataText) == false) {
                     this.data.style.text = '#fff';
                 }
+            }
+        },
+        checkCookieExists: function(cookieName) {
+            // Check for cookie
+
+            let cookies = document.cookie.split(';');
+
+            //document.cookie = cookieName+'=true';
+
+            let cookieIndex = -1;
+
+            for(let x=0; x<cookies.length; x++) {
+                //console.log(x+': '+cookies[x]);
+                if(cookies[x].includes(cookieName)) {
+                    cookieIndex = x;
+                    break;
+                }
+            }
+
+            if(cookieIndex == -1) {
+                // Cookie doesnt exist, show notice
+                this.visible = true;
+            }   else {
+                // Cookie exists
             }
         }
     },
