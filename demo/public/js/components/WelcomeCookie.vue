@@ -7,7 +7,7 @@
             }">
             <p>{{ data.message }}</p>
 
-            <span id="close-button">Accept & Close [x]</span>
+            <span id="close-button" v-on:click="setCookie(cookieName)">Accept & Close [x]</span>
             <div class="clear"></div>
         </div>
 
@@ -21,8 +21,9 @@ export default {
             /* Component Main Properties */
             visible: false,
             defaultCookieName: 'cookie-notice-demo',
+            cookieName: 'cookie-notice-demo', // Use defualt until it's set in 'created'
 
-            /* Custimizable Properties */
+            /* Customizable Properties */
             dataStyle: 'style',
             dataText: 'text',
             dataBg: 'background',
@@ -38,6 +39,8 @@ export default {
         let cookieName = this.defaultCookieName;
         if(this.data.hasOwnProperty(this.dataCookieName)) cookieName = this.data.cookieName;
         
+        this.cookieName = cookieName;
+
         // If cookie doesnt exist then show
         if(this.checkCookieExists(cookieName) == false) {
             this.visible = true;
@@ -73,8 +76,6 @@ export default {
 
             let cookies = document.cookie.split(';');
 
-            //document.cookie = cookieName+'=true';
-
             let cookieIndex = -1;
 
             for(let x=0; x<cookies.length; x++) {
@@ -91,6 +92,15 @@ export default {
                 // Cookie exists
             }
             return true;
+        },
+        setCookie: function() {
+
+            try {
+                document.cookie = this.cookieName+'=true';
+                this.visible = false;
+            }   catch($e) {
+                console.log('Error: cookie notice not set.');
+            }
         }
     },
     props: ['data']
