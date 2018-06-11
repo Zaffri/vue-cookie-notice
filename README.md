@@ -3,33 +3,52 @@ Version 0.0.1
 
 Customizable cookie notice component (VueJS).
 
+---
+
 ## Component Installation
 
-## Running Demo
-
-* Change to demo directory and install app dependencies using npm.
+* Install NPM package
 
 ```
-$ cd demo
-$ npm install
+npm install vue-cookie-notice --save
 ```
 
-* Bundle app JS using Webpack.
+* Import component
 
 ```
-$ npm run build
+import VueCookieNotice from 'vue-cookie-notice';
 ```
 
-* Run app using node.
+* Setup component config e.g.
 
 ```
-$ npm run dev
+export default {
+    data () {
+        return {
+            cookieData: {
+                cookieName: 'cookie-notice-identifier',
+                message: 'This site uses cookies, by continuing you acknowledge that you have read and understand our Cookie Policy, Privacy Policy, and our Terms of Service.',
+                style: {
+                    background: '#1a75ff',
+                    text: '#e0f5ff'
+                }
+            }
+        }
+    }
+}
+``` 
+
+* Add your component to your template and pass the component the config as a prop e.g.
+
+```
+<cookie v-bind:data="cookieData"></cookie>
 ```
 
-* Visit http://localhost/ to see working demo.
+---
 
 ## Future Changes
 
 * Remove demo and update README.md
 * Add notice position customization.
 * Add notice transparency customization.
+* Remove demo from NPM package & link codepen or alternative demo.
